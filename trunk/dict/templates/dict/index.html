@@ -1,0 +1,9 @@
+{% if latest_words %}
+    <ul>
+    {% for poll in latest_words %}
+        <li>{{ poll.term }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No words are available.</p>
+{% endif %}
