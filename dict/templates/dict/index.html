@@ -1,9 +1,17 @@
-{% if latest_words %}
-    <ul>
-    {% for poll in latest_words %}
-        <li>{{ poll.term }}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No words are available.</p>
-{% endif %}
+{% extends "base.html" %}
+{% block title %}Welcome to CTDict{% endblock %}
+{% block content %}
+    {% if latest_words %}
+        {% for word in latest_words %}
+            <div class="wordEntry">
+                <div>{{ word.term }}</div>
+                <div>{{word.}}</div>
+                <div>{{word.sentence}}</div>
+                
+                
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No words are available.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,70 @@
+#header {
+    background:#336699 none repeat scroll 0 0;
+    height:2em;
+}
+#wrapper{
+    width:75em;
+    max-width:90%;
+    border:1px #ccc solid;
+    text-align:left;
+    margin:0 auto;
+}
+
+#leftSideBar{
+    background:#CCCC00 none repeat scroll 0 0;
+    float:left;
+    height:20em;
+    max-width:19%;
+    width:15em;
+}
+
+#leftSideBar ul {
+    list-style-type:none;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    background-color:#FFFBCE;
+    line-height:11pt;
+    vertical-align:top;
+}
+#leftSideBar li {
+    padding-left:8px;
+}
+
+#content
+{
+    background:#FFFFFF none repeat scroll 0 0;
+    float:right;
+    max-width:80%;
+    width:60em;
+}
+#mainContent{
+    background:#FFFFFF none repeat scroll 0 0;
+    float:left;
+    height:20em;
+    max-width:71%;
+    width:50em;
+}
+
+#rightSideBar {
+    background:#99CC99 none repeat scroll 0 0;
+    float:right;
+    height:20em;
+    max-width:28%;
+    width:20em;
+}
+
+#footer{
+    background:#993300 none repeat scroll 0 0;
+    clear:both;
+    height:2em;
+}
+.example{
+    font-style:italic;
+    margin-bottom:5pt;
+    margin-top:5pt;
+}
+body, tr, th, td, table, form, input, button, select, option, textarea {
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:12px;
+}
