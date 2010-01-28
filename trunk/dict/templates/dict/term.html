@@ -1,2 +1,12 @@
-{{ newWord}}<br/>
-{{ meaning}}
+{% extends "base.html" %}
+
+{% block title %}{{ newWord}}{% endblock %}
+
+{% block content %}
+    <h2>{{ newWord}}</h2>
+    <p>{{ meaning}}</p>
+    <div class="example">
+        {{ sentence}}
+    </div>
+{% endblock %}
+
