@@ -1,25 +1,28 @@
-from django.template import Context, loader
+from django.template import Context, loader, RequestContext
 from ctdict.dict.models import Word
 from django.http import HttpResponse
+from django.shortcuts import render_to_response, get_object_or_404
 
 def index(request):
-    latest_words = Word.objects.all().order_by('createdTime')[:10]
+    latest_words = Word.objects.all().order_by('addedTime')[:10]
     t = loader.get_template('dict/index.html')
     c = Context({
         'latest_words': latest_words,
         })
-    return HttpResponse(t.render(c))
+    return render_to_response('dict/index.html',
+                          c,
+                          context_instance=RequestContext(request))
+
     
 def term(request, word):
-    pk = Word.objects.filter(term=word)
-    #newWord = Defination.objects.filter(ofWord=pk[0].id)
+    newWord = Word.objects.filter(term=word)
     meaning = newWord[0].meaning
-    sentence = newWord[0].sentence
+    example = newWord[0].example
     t = loader.get_template('dict/term.html')
     c = Context({
         'newWord': newWord,
         'meaning': meaning,
-        'sentence': sentence,
+        'example': example,
         })
     return HttpResponse(t.render(c))
     

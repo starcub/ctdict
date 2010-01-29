@@ -10,8 +10,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     
     # static files
-    (r'^css/(?P<path>.*)$', 'django.views.static.serve',{'document_root': join(settings.settings_path, 'dict/templates/css')}),
-    (r'^images/(?P<path>.*)$', 'django.views.static.serve',{'document_root': join(settings.settings_path, 'dict/templates/images')}),
+    (r'^css/(?P<path>.*)$', 'django.views.static.serve',{'document_root': join(settings.settings_path, 'media/css')}),
+    (r'^images/(?P<path>.*)$', 'django.views.static.serve',{'document_root': join(settings.settings_path, 'media/images')}),
     (r'^accounts/', include('registration.backends.default.urls')),
     (r'^term/(.*)', 'ctdict.dict.views.term'),
     (r'^ctdict/', 'ctdict.dict.views.index'),

@@ -96,3 +96,9 @@ EMAIL_HOST_USER = 'xuancn@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True;
 
+TEMPLATE_CONTEXT_PROCESSORS=("django.core.context_processors.auth",
+"django.core.context_processors.debug",
+"django.core.context_processors.i18n",
+"django.core.context_processors.media")
+
+
